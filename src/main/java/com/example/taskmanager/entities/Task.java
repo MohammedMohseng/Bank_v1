@@ -1,10 +1,12 @@
 package com.example.taskmanager.entities;
+
 import java.time.LocalDateTime;
 import jakarta.persistence.*;
 
 @Entity
 public class Task {
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String title;
@@ -16,20 +18,35 @@ public class Task {
         return id;
     }
 
-    public String getTilte() {
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getTitle() {
         return this.title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public String getDescription() {
         return description;
     }
 
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
     public boolean getCompleted() {
         return this.completed;
+    }
+
+    public void setCompleted(boolean completed) {
+        this.completed = completed;
     }
 
     public LocalDateTime getCreatedAt() {
         return createdAt;
     }
-
 }
