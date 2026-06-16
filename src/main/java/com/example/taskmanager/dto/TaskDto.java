@@ -1,8 +1,7 @@
-package com.example.taskmanager.DTOs;
+package com.example.taskmanager.dto;
+import com.example.taskmanager.entity.Task;
 
-import com.example.taskmanager.entities.Task;
-
-public class TaskDTO {
+public class TaskDto {
 
     Task task = new Task();
     public Long id;
@@ -10,6 +9,11 @@ public class TaskDTO {
     public String description;
     public boolean completed;
 
+
+    public Long getId() {
+        return id;
+    }
+    
     public String getTitle() {
         return title;
     }
