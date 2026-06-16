@@ -8,6 +8,6 @@ public class TaskmanagerApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(TaskmanagerApplication.class, args);
+		System.out.println("the server in: " + "http://localhost:8080");
 	}
-
 }
