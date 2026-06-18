@@ -11,14 +11,16 @@
 	<groupId>com.example</groupId>
 	<artifactId>taskmanager</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name/>
+	<name>Task Manager From scratch</name>
 	<description/>
 	<url/>
 	<licenses>
 		<license/>
 	</licenses>
 	<developers>
-		<developer/>
+		<developer>
+			<name>MohammedMohsen</name>
+		</developer>
 	</developers>
 	<scm>
 		<connection/>

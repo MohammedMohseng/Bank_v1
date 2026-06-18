@@ -18,10 +18,6 @@ public class Task {
         return id;
     }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-
     public String getTitle() {
         return this.title;
     }
@@ -46,7 +42,11 @@ public class Task {
         this.completed = completed;
     }
 
+    public void setCreatedAt(LocalDateTime createdAt) {
+        this.createdAt = createdAt;
+    }
     public LocalDateTime getCreatedAt() {
+        this.createdAt = LocalDateTime.now();
         return createdAt;
     }
 }
