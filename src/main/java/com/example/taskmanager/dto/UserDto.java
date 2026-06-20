@@ -2,7 +2,7 @@ package com.example.taskmanager.dto;
 
 import com.example.taskmanager.types.Types.Gender;
 
-public class AuthDto {
+public class UserDto {
     private Long id;
     private String userName;
     private String password;

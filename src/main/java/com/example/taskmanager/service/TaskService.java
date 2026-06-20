@@ -32,12 +32,12 @@ public class TaskService {
         return ToDto(taskNew);
     }
 
-    public String completed(TaskDto dto) throws RuntimeException {
-        Task taskCompleted = taskRepo.findById(dto.getId())
+    public TaskDto completed(Long id) throws RuntimeException {
+        Task task = taskRepo.findById(id)
                 .orElseThrow(() -> new RuntimeException("No task Found "));
-        taskCompleted.setCompleted(true);
-        taskRepo.save(taskCompleted);
-        return "completed";
+        task.setCompleted(true);
+        taskRepo.save(task);
+        return ToDto(task);
     }
 
     public List<TaskDto> geTaskDtos() {

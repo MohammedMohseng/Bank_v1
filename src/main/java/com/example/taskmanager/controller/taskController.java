@@ -2,8 +2,8 @@ package com.example.taskmanager.controller;
 
 import java.util.List;
 
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import com.example.taskmanager.dto.TaskDto;
 import com.example.taskmanager.service.TaskService;
 import com.example.taskmanager.types.Message;
@@ -38,11 +38,18 @@ public class taskController {
         return updatedTask;
     }
 
+    @PatchMapping("{id}/completed")
+    public ResponseEntity completeTask(@PathVariable Long id) {
+        TaskDto completed = service.completed(id);
+
+        return ResponseEntity.ok(completed);
+    }
+
     // working ...
-    @PostMapping("delete/{id}")
+    @DeleteMapping("delete/{id}")
     public Message deleteExistedTask(@PathVariable Long id) {
-    Message message =  service.deleteTask(id);
-    return message;
+        Message message = service.deleteTask(id);
+        return message;
     }
 
 }
